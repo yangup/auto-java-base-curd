@@ -2,6 +2,12 @@
 
 自动生成一些基础CURD的代码
 
+
+#### CURD
+
+作为一个资深的CURD工程师,总是写一些基础的代码,我实在看不下去了,
+写了一个自动生成基础代码的工具,希望对大家有用
+
 #### 下载项目
 
 ``` bash
@@ -11,47 +17,28 @@
 WebContent/WEB-INF/lib
 
 然后
-到src/u.auto/main/AutoMain配置一些数据库参数
+到src/u/auto/main/AutoMain配置一些数据库参数
 
 最后
 运行
-src/u.auto/main/AutoMain
+src/u/auto/main/AutoMain
 就可以了
 
 项目中的 auto.demo 我生成的一个 demo
 
-诸位觉得有用,就可以下载下来,用用,代码,你可以自己修改一下,让生成的模板,更适应你现在的项目,
-很佛系
+诸位觉得有用,就可以下载下来,用用,代码,你可以自己修改一下,让生成的代码,更适应你现在的项目,
+我维护这个项目很佛系
 
 ```
 
+#### 以下是操作截图
+
+# <img src="github.com/yangup/auto-java-base-curd/main.png"> 
 
 
+#### 以下生成的代码截图
 
-#### 项目源码
+# <img src="github.com/yangup/auto-java-base-curd/code1.png"> 
+# <img src="github.com/yangup/auto-java-base-curd/code2.png"> 
+# <img src="github.com/yangup/auto-java-base-curd/code3.png"> 
 
-|     |   后端源码  |   前端源码  |
-|---  |--- | --- |
-|  github   |  https://github.com/elunez/eladmin   |  https://github.com/elunez/eladmin-qd   |
-|  码云   |  https://gitee.com/elunez/eladmin   |  https://gitee.com/elunez/eladmin-qt   |
-
-#### 开发文档
-[https://docs.auauz.net/#/](https://docs.auauz.net/#/)
-
-#### 前端模板
-
-初始模板基于： [https://github.com/PanJiaChen/vue-admin-template](https://github.com/PanJiaChen/vue-admin-template)
-
-模板文档： [https://panjiachen.github.io/vue-element-admin-site/zh/guide/](https://panjiachen.github.io/vue-element-admin-site/zh/guide/)
-
-#### Build Setup
-``` bash
-
-# 启动服务 localhost:8013
-npm run dev
-
-# 构建生产环境
-npm run build
-```
-
-#### 反馈交流
