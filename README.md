@@ -33,12 +33,12 @@ src/u/auto/main/AutoMain
 
 #### 以下是操作截图
 
-# <img src="github.com/yangup/auto-java-base-curd/main.png"> 
+# <img src="auto/main.png"> 
 
 
 #### 以下生成的代码截图
 
-# <img src="github.com/yangup/auto-java-base-curd/code1.png"> 
-# <img src="github.com/yangup/auto-java-base-curd/code2.png"> 
-# <img src="github.com/yangup/auto-java-base-curd/code3.png"> 
+# <img src="auto/code1.png"> 
+# <img src="auto/code2.png"> 
+# <img src="auto/code3.png"> 
 
