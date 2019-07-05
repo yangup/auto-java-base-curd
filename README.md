@@ -46,8 +46,6 @@ src/u.auto/main/AutoMain
 
 #### Build Setup
 ``` bash
-# 安装依赖
-npm install
 
 # 启动服务 localhost:8013
 npm run dev
