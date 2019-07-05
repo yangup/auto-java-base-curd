@@ -1,0 +1,85 @@
+**接口-作者说明：** 
+
+- 接口概述：
+- 作者：wantw
+- 最后修改时间：2019-07-05 10:41
+- 状态：`不可调用,未测试`
+- 修改说明：
+
+**请求URL：** 
+- ` newerYield/newerYield.do `
+  
+**请求方式：**
+- POST 
+
+**请求参数说明：** 
+
+|参数名  |参数描述  |是否必填  |类型  |最大长度(整数,小数)  |说明
+|:
+|newerYieldId  |新手结算id  |是  |String  |20  |  |
+|memberId  |用户id  |是  |String  |20  |  |
+|newerYieldMainId  |新手日结算id  |否  |String  |20  |  |
+|houseBuyId  |房产id  |是  |String  |20  |  |
+|yieldOrderno  |流水号  |是  |String  |20  |  |
+|amount  |本金  |是  |BigDecimal  |10,2  |  |
+|interest  |收益  |是  |BigDecimal  |10,2  |  |
+|total  |总金额  |是  |BigDecimal  |10,2  |  |
+|ratio  |收益率  |是  |BigDecimal  |10,2  |  |
+|buyDate  |本金支付日期  |否  |Timestamp  |  |  |
+|payDate  |还款支付日期  |否  |Timestamp  |  |  |
+|status  |支付状态：0未付款；1已付款；2结算中；3已结算；4:转账中；5已转账；6:打款中；7已打款，交易成功；9失败  |是  |String  |2  |  |
+|serverAmount  |交易服务费  |否  |BigDecimal  |10,2  |  |
+|houseId  |标的id,house_id  |否  |String  |20  |  |
+|accountId  |江西银行的--accountId--电子账号--投资人  |否  |String  |19  |  |
+|authCode  |江西银行--债权授权码--在江西银行那里的购买凭证  |否  |String  |20  |  |
+|actualPayDate  |实际还款支付日期  |否  |Timestamp  |  |  |  |
+
+**请求示例：**
+
+``` 
+
+{
+	"accountId":"江西银行的--accountId--电子账号--投资人",
+	"actualPayDate":"实际还款支付日期",
+	"amount":"本金",
+	"authCode":"江西银行--债权授权码--在江西银行那里的购买凭证",
+	"buyDate":"本金支付日期",
+	"houseBuyId":"房产id",
+	"houseId":"标的id,
+	house_id",
+	"interest":"收益",
+	"memberId":"用户id",
+	"newerYieldId":"新手结算id",
+	"newerYieldMainId":"新手日结算id",
+	"payDate":"还款支付日期",
+	"ratio":"收益率",
+	"serverAmount":"交易服务费",
+	"status":"支付状态：0未付款；1已付款；2结算中；3已结算；4:转账中；5已转账；6:打款中；7已打款，交易成功；9失败",
+	"total":"总金额",
+	"yieldOrderno":"流水号"
+}
+
+```
+
+ **返回参数说明：** 
+
+ **返回示例：**
+
+``` 
+
+{
+    "errorCode":"SUCCESS",
+    "message":"成功",
+    "data":
+    	拷贝上面的
+    ,
+    "dataTotal":null
+}
+
+```
+
+ **备注** 
+
+
+
+

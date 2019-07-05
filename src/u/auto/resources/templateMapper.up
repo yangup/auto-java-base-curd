@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="u.frame.web.demotra.dao.-modelName-Dao">
+	
+	<!-- auto-generated-start -->
+	
+	<sql id="columns">
+		-columns-
+	</sql>
+	
+	<sql id="where">
+		<where>				
+		       -where-
+		</where>
+	</sql>
+	
+	<insert id="insert">
+       -insert-
+	</insert>
+    
+	<update id="update" >
+       -update-
+	</update>
+	
+	<update id="updateByParam" >
+       -updateByParam-
+	</update>
+	
+    <delete id="deleteById">
+        -deleteById-
+    </delete>
+    
+    <delete id="removeByEntity">
+        -deleteByEntity-
+    </delete>
+    
+    <select id="getById" resultType="-modelName-">
+		-getById-
+	</select>
+	
+	<select id="findPage" resultType="-modelName-">
+    	-getList-
+    	<if test="@Ognl@isNotEmpty(sortColumns)">
+			order by ${sortColumns}
+		</if>
+    </select>
+	
+    <select id="findPage_count" resultType="long">
+        -getList_count-
+    </select>
+    
+    <!-- auto-generated-end -->
+	<!-- other-sql -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>
+

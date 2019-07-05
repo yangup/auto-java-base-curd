@@ -1,0 +1,19 @@
+package u.frame.web.demotra.dao;
+
+import org.springframework.stereotype.Repository;
+
+import u.frame.common.CommonDao;
+
+
+/**
+ * -modelComment-<br>
+ * @Dao<br>
+ * @className：-modelName-<br>
+ * @auto-generated<br>
+ */
+@Repository
+public interface -modelName-Dao extends EntityDao<-modelName-,String>{
+	
+	public void updateByParam(-modelName- -modelNameParam-);
+	
+}

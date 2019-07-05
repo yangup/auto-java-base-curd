@@ -1,0 +1,17 @@
+package u.frame.web.demotra.model;
+
+import java.io.Serializable;
+import java.sql.*;
+
+/**
+ * -modelComment-<br>
+ * @ModelAnnotation<br>
+ * @className：-modelName-<br> 
+ * @auto-generated<br>
+ */
+public class -modelName-Web implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+
+	-startField-
+}

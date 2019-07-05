@@ -1,0 +1,29 @@
+package u.frame.web.demotra.model;
+
+import java.io.Serializable;
+import java.sql.*;
+
+import u.frame.common.CommonEntity;
+
+/**
+ * -modelComment-<br>
+ * @Dto<br>
+ * @className：-modelName-<br> 
+ * @auto-generated<br>
+ */
+public class -modelName- extends BaseEntity implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+
+	-startField-
+	public -modelName-() {
+
+	}
+	
+	/* 使用数据库默认值的构造函数 */
+	public -modelName-(Object object) {
+		-createConstructor-
+	}
+	
+	-startMethod-
+}

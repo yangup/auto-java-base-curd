@@ -1,0 +1,34 @@
+package u.frame.web.demotra.service;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import u.frame.common.CommonSer;
+import u.frame.common.Page;
+
+/**
+ * -modelComment-<br>
+ * @Service<br>
+ * @className：-modelName-Ser<br> 
+ * @auto-generated<br>
+ */
+@Service
+public class -modelName-Ser extends BaseManager<-modelName-,String>{
+
+	private static final Logger log = LogManager.getLogger(-modelName-Ser.class.getName());
+	
+	@Autowired
+	private -modelName-Dao -modelNameParam-Dao;
+	
+	@Override
+	public -modelName-Dao getEntityMapper(){
+    	return -modelNameParam-Dao;
+    }
+    
+    public Page pageQuery(-modelName- -modelNameParam-) {
+		return pageQuery(-modelNameParam-Dao, -modelNameParam-, -modelName-Dao.class.getName());
+	}
+	
+}

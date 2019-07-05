@@ -1,0 +1,136 @@
+package yangpu;//自己修改包
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import u.frame.common.Page;
+import u.frame.common.Result;
+
+/**
+ * @Controller<br>
+ * @className：-modelName-<br> 
+ * @auto-generated<br>
+ */
+@Controller
+@RequestMapping("/companyInfoRf")
+public class -modelName-CtrRestful {
+
+	private static final Logger log = LogManager.getLogger(-modelName-Ctr.class.getName());
+	
+	@Autowired
+	private -modelName-Ser -modelNameParam-Ser;
+	
+	/**
+	 * @insert
+	 * @Describtion：新增-modelName-<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping(value = "/-modelNameParam-", method = RequestMethod.POST)
+	@ResponseBody
+	public Result<-modelName-> post(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<-modelName-> result = new Result<>();
+		-modelNameParam-Ser.insert(-modelNameParam-);
+		result.setData(-modelNameParam-);
+		return result;
+	}
+
+	/**
+	 * @delete
+	 * @Describtion：根据Id删除<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping(value = "/-modelNameParam-/{Id}", method = RequestMethod.DELETE)
+	@ResponseBody
+	public Result<String> delete(@PathVariable("Id") String -modelNameId-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<String> result = new Result<String>();
+		-modelNameParam-Ser.deleteById(-modelNameId-);
+		return result;
+	}
+
+	/**
+	 * @select
+	 * @Describtion：根据Id查询<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping(value = "/-modelNameParam-/{Id}", method = RequestMethod.GET)
+	@ResponseBody
+	public Result<-modelName-> get(@PathVariable("Id") String -modelNameId-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<-modelName-> result = new Result<-modelName->();
+		result.setData(-modelNameParam-Ser.getById(-modelNameId-));
+		return result;
+	}
+
+	/**
+	 * @update
+	 * @Describtion：根据Id更新-modelName-<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping(value = "/-modelNameParam-/{Id}", method = RequestMethod.PUT)
+	@ResponseBody
+	public Result<-modelName-> put(@PathVariable("Id") String -modelNameId-,
+			@RequestBody -modelName- -modelNameParam-, HttpServletRequest request, HttpServletResponse response)
+					throws Exception {
+		Result<-modelName-> result = new Result<-modelName->();
+		-modelNameParam-Ser.update(-modelNameParam-);
+		result.setData(-modelNameParam-);
+		return result;
+	}
+
+	/**
+	 * @select
+	 * @Describtion：根据-modelName-查询list<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping(value = "/-modelNameParam-/list", method = RequestMethod.POST)
+	@ResponseBody
+	public Result<List<-modelName->> selectByMoreInfo(@RequestBody -modelName- -modelNameParam-,
+			HttpServletRequest request, HttpServletResponse response) throws Exception {
+		Result<List<-modelName->> result = new Result<List<-modelName->>();
+		result.setData(-modelNameParam-Ser.getList(-modelNameParam-));
+		return result;
+	}
+	
+	/**
+	 * @select
+	 * @Describtion：根据-modelName-查询page<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping(value = "/-modelNameParam-/page", method = RequestMethod.POST)
+	@ResponseBody
+	public Result<Page> page(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<Page> result = new Result<Page>();
+		result.setData(-modelNameParam-Ser.getPage(-modelNameParam-));
+		return result;
+	}
+
+	/**
+	 * @delete
+	 * @Describtion：根据-modelName-删除<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping(value = "/-modelNameParam-", method = RequestMethod.DELETE)
+	@ResponseBody
+	public Result<-modelName-> deleteByEntity(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<-modelName-> result = new Result<-modelName->();
+		-modelNameParam-Ser.deleteByEntity(-modelNameParam-);
+		return result;
+	}
+
+}

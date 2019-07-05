@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="u.frame.web.demotra.dao.NewerYieldDao">
+	
+	<!-- auto-generated-start -->
+	
+	<sql id="columns">
+		 newer_yield_id      AS newerYieldId        	,member_id           AS memberId
+		,newer_yield_main_id AS newerYieldMainId    	,house_buy_id        AS houseBuyId
+		,yield_orderno       AS yieldOrderno        	,amount              AS amount
+		,interest            AS interest            	,total               AS total
+		,ratio               AS ratio               	,buy_date            AS buyDate
+		,pay_date            AS payDate             	,status              AS status
+		,server_amount       AS serverAmount        	,house_id            AS houseId
+		,account_id          AS accountId           	,auth_code           AS authCode
+		,actual_pay_date     AS actualPayDate	</sql>
+	
+	<sql id="where">
+		<where>				
+			<if test="@Ognl@isNotEmpty(newerYieldId)">
+				AND newer_yield_id       = #{newerYieldId}
+			</if>
+			<if test="@Ognl@isNotEmpty(memberId)">
+				AND member_id            = #{memberId}
+			</if>
+			<if test="@Ognl@isNotEmpty(newerYieldMainId)">
+				AND newer_yield_main_id  = #{newerYieldMainId}
+			</if>
+			<if test="@Ognl@isNotEmpty(houseBuyId)">
+				AND house_buy_id         = #{houseBuyId}
+			</if>
+			<if test="@Ognl@isNotEmpty(yieldOrderno)">
+				AND yield_orderno        = #{yieldOrderno}
+			</if>
+			<if test="@Ognl@isNotEmpty(amount)">
+				AND amount               = #{amount}
+			</if>
+			<if test="@Ognl@isNotEmpty(interest)">
+				AND interest             = #{interest}
+			</if>
+			<if test="@Ognl@isNotEmpty(total)">
+				AND total                = #{total}
+			</if>
+			<if test="@Ognl@isNotEmpty(ratio)">
+				AND ratio                = #{ratio}
+			</if>
+			<if test="@Ognl@isNotEmpty(buyDate)">
+				AND buy_date             = #{buyDate}
+			</if>
+			<if test="@Ognl@isNotEmpty(payDate)">
+				AND pay_date             = #{payDate}
+			</if>
+			<if test="@Ognl@isNotEmpty(status)">
+				AND status               = #{status}
+			</if>
+			<if test="@Ognl@isNotEmpty(serverAmount)">
+				AND server_amount        = #{serverAmount}
+			</if>
+			<if test="@Ognl@isNotEmpty(houseId)">
+				AND house_id             = #{houseId}
+			</if>
+			<if test="@Ognl@isNotEmpty(accountId)">
+				AND account_id           = #{accountId}
+			</if>
+			<if test="@Ognl@isNotEmpty(authCode)">
+				AND auth_code            = #{authCode}
+			</if>
+			<if test="@Ognl@isNotEmpty(actualPayDate)">
+				AND actual_pay_date      = #{actualPayDate}
+			</if>
+		</where>
+	</sql>
+	
+	<insert id="insert">
+		INSERT INTO newer_yield (
+			 newer_yield_id
+			,member_id
+			,newer_yield_main_id
+			,house_buy_id
+			,yield_orderno
+			,amount
+			,interest
+			,total
+			,ratio
+			,buy_date
+			,pay_date
+			,status
+			,server_amount
+			,house_id
+			,account_id
+			,auth_code
+			,actual_pay_date
+		) VALUES (
+			 #{newerYieldId}
+			,#{memberId}
+			,#{newerYieldMainId}
+			,#{houseBuyId}
+			,#{yieldOrderno}
+			,#{amount}
+			,#{interest}
+			,#{total}
+			,#{ratio}
+			,#{buyDate}
+			,#{payDate}
+			,#{status}
+			,#{serverAmount}
+			,#{houseId}
+			,#{accountId}
+			,#{authCode}
+			,#{actualPayDate}
+		)
+	</insert>
+    
+	<update id="update" >
+		UPDATE
+			newer_yield
+		SET
+			 newer_yield_id      = #{newerYieldId}
+			,member_id           = #{memberId}
+			,newer_yield_main_id = #{newerYieldMainId}
+			,house_buy_id        = #{houseBuyId}
+			,yield_orderno       = #{yieldOrderno}
+			,amount              = #{amount}
+			,interest            = #{interest}
+			,total               = #{total}
+			,ratio               = #{ratio}
+			,buy_date            = #{buyDate}
+			,pay_date            = #{payDate}
+			,status              = #{status}
+			,server_amount       = #{serverAmount}
+			,house_id            = #{houseId}
+			,account_id          = #{accountId}
+			,auth_code           = #{authCode}
+			,actual_pay_date     = #{actualPayDate}
+		WHERE
+			 newer_yield_id      = #{newerYieldId}
+	</update>
+	
+	<update id="updateByParam" >
+		UPDATE
+			newer_yield
+		<set>
+			<if test="@Ognl@isNotEmpty(memberId)">
+				member_id            = #{memberId},
+			</if>
+			<if test="@Ognl@isNotEmpty(newerYieldMainId)">
+				newer_yield_main_id  = #{newerYieldMainId},
+			</if>
+			<if test="@Ognl@isNotEmpty(houseBuyId)">
+				house_buy_id         = #{houseBuyId},
+			</if>
+			<if test="@Ognl@isNotEmpty(yieldOrderno)">
+				yield_orderno        = #{yieldOrderno},
+			</if>
+			<if test="@Ognl@isNotEmpty(amount)">
+				amount               = #{amount},
+			</if>
+			<if test="@Ognl@isNotEmpty(interest)">
+				interest             = #{interest},
+			</if>
+			<if test="@Ognl@isNotEmpty(total)">
+				total                = #{total},
+			</if>
+			<if test="@Ognl@isNotEmpty(ratio)">
+				ratio                = #{ratio},
+			</if>
+			<if test="@Ognl@isNotEmpty(buyDate)">
+				buy_date             = #{buyDate},
+			</if>
+			<if test="@Ognl@isNotEmpty(payDate)">
+				pay_date             = #{payDate},
+			</if>
+			<if test="@Ognl@isNotEmpty(status)">
+				status               = #{status},
+			</if>
+			<if test="@Ognl@isNotEmpty(serverAmount)">
+				server_amount        = #{serverAmount},
+			</if>
+			<if test="@Ognl@isNotEmpty(houseId)">
+				house_id             = #{houseId},
+			</if>
+			<if test="@Ognl@isNotEmpty(accountId)">
+				account_id           = #{accountId},
+			</if>
+			<if test="@Ognl@isNotEmpty(authCode)">
+				auth_code            = #{authCode},
+			</if>
+			<if test="@Ognl@isNotEmpty(actualPayDate)">
+				actual_pay_date      = #{actualPayDate},
+			</if>
+		</set>
+		<where>
+			<if test="@Ognl@isNotEmpty(newerYieldId)">
+				AND newer_yield_id = #{newerYieldId}
+			</if>
+		</where>
+	</update>
+	
+    <delete id="deleteById">
+		DELETE
+		FROM
+			newer_yield
+		WHERE
+			newer_yield_id = #{newerYieldId}
+    </delete>
+    
+    <delete id="removeByEntity">
+		DELETE
+		FROM
+			newer_yield
+		<include refid="where"/>
+    </delete>
+    
+    <select id="getById" resultType="NewerYield">
+		SELECT
+			<include refid="columns" />
+		FROM
+			newer_yield
+		WHERE
+			newer_yield_id = #{newerYieldId}
+	</select>
+	
+	<select id="findPage" resultType="NewerYield">
+		SELECT
+			<include refid="columns" />
+		FROM
+			newer_yield
+		<include refid="where"/>
+    	<if test="@Ognl@isNotEmpty(sortColumns)">
+			order by ${sortColumns}
+		</if>
+    </select>
+	
+    <select id="findPage_count" resultType="long">
+		SELECT
+			count(newer_yield_id)
+		FROM
+			newer_yield
+		<include refid="where"/>
+    </select>
+    
+    <!-- auto-generated-end -->
+	<!-- other-sql -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>
+

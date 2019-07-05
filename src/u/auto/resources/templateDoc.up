@@ -1,0 +1,50 @@
+**接口-作者说明：** 
+
+- 接口概述：-modelComment-
+- 作者：-user-
+- 最后修改时间：-dateYMDHM-
+- 状态：`不可调用,未测试`
+- 修改说明：
+
+**请求URL：** 
+- ` -modelNameParam-/-modelNameParam-.do `
+  
+**请求方式：**
+- POST 
+
+**请求参数说明：** 
+
+|参数名  |参数描述  |是否必填  |类型  |最大长度(整数,小数)  |说明
+|:
+-columnNote-
+
+**请求示例：**
+
+``` 
+
+-modelJson-
+
+```
+
+ **返回参数说明：** 
+
+ **返回示例：**
+
+``` 
+
+{
+    "errorCode":"SUCCESS",
+    "message":"成功",
+    "data":
+    	拷贝上面的
+    ,
+    "dataTotal":null
+}
+
+```
+
+ **备注** 
+
+
+
+

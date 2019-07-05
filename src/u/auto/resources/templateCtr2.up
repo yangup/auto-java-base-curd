@@ -1,0 +1,115 @@
+package u.frame.web.demotra.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import u.frame.common.CommonCtr;
+import u.frame.common.Page;
+import u.frame.common.Result;
+
+
+/**
+ * -modelComment-<br>
+ * @Controller<br>
+ * @className：-modelName-Ctr<br> 
+ * @auto-generated<br>
+ */
+@Controller
+@RequestMapping("/-modelNameParam-")
+public class -modelName-Ctr extends BaseRestSpringController {
+
+	private static final Logger log = LogManager.getLogger(-modelName-Ctr.class.getName());
+	
+	@Autowired
+	private -modelName-Ser -modelNameParam-Ser;
+	
+	/**
+	 * @Describtion：新增or更新-modelName-<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping("/addUpdate")
+	@ResponseBody
+	public Result<-modelName-> addUpdate(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<-modelName-> result = new Result<-modelName->();
+		// -modelNameParam-Ser.insert(-modelNameParam-);
+		result.setData(-modelNameParam-);
+		return result;
+	}
+
+	/**
+	 * @Describtion：根据Id删除<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping("/delById")
+	@ResponseBody
+	public Result<-modelName-> delete(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<-modelName-> result = new Result<-modelName->();
+		// -modelNameParam-Ser.deleteById(-modelNameParam-.get-modelNameIdTitle-());
+		return result;
+	}
+	
+	/**
+	 * @Describtion：根据entity删除<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping("/delByEntity")
+	@ResponseBody
+	public Result<-modelName-> deleteBy(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<-modelName-> result = new Result<-modelName->();
+		// -modelNameParam-Ser.deleteByEntity(-modelNameParam-);
+		return result;
+	}
+
+	/**
+	 * @Describtion：根据Id查询<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping("/getById")
+	@ResponseBody
+	public Result<-modelName-> getById(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<-modelName-> result = new Result<-modelName->();
+		result.setData(-modelNameParam-Ser.getById(-modelNameParam-.get-modelNameIdTitle-()));
+		return result;
+	}
+
+	/**
+	 * @Describtion：根据entity查询返回list<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping("/list")
+	@ResponseBody
+	public Result<List<-modelName->> list(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<List<-modelName->> result = new Result<List<-modelName->>();
+		result.setData(-modelNameParam-Ser.getList(-modelNameParam-));
+		return result;
+	}
+	
+	/**
+	 * @Describtion：根据entity查询返回page,分页数据<br>
+	 * @auto-generated<br>
+	 */
+	@RequestMapping("/page")
+	@ResponseBody
+	public Result<Page> page(@RequestBody -modelName- -modelNameParam-, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		Result<Page> result = new Result<Page>();
+		result.setData(-modelNameParam-Ser.getPage(-modelNameParam-));
+		return result;
+	}
+
+}
