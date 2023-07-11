@@ -16,9 +16,9 @@ public class AutoMain {
         // connection.start("sys_authorities");
         // connection.start("house_release");
         // project_info
-        connection.start("newer_yield");
+//        connection.start("newer_yield");
 //		AutoMain.class.getAnnotations();
-        // connection.start("member_info");
+         connection.start("member_info");
         // connection.start();
     }
 
