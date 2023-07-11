@@ -7,7 +7,7 @@ public class AutoMain {
 
     public static void main(String[] args) {
         // C:\Users\wantw\Desktop\auto
-        Constant.path = "C:\\Users\\wantw\\Desktop\\auto\\";
+        Constant.path = "C:\\Users\\wantw\\Desktop\\auto\\1\\";
         Constant.isTable = Boolean.FALSE;
         // Constant.isTable = Boolean.TRUE;
         // Constant.isConstructor = Boolean.FALSE;
